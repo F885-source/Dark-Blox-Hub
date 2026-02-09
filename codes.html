@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Redeem Codes - DarkBlox Hub</title>
+
+<style>
+body {
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#0d0d0d;
+  color:white;
+}
+
+header{
+  background:black;
+  padding:15px 30px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+header h1{
+  margin:0;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
+}
+
+.container{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+}
+
+h2{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.code-card{
+  background:#1a1a1a;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:15px;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  flex-wrap: wrap;
+}
+
+.code-info{
+  text-align:left;
+}
+
+.code-info p{
+  margin:4px 0;
+  font-size:15px;
+}
+
+button{
+  padding:8px 14px;
+  background:#ff003c;
+  border:none;
+  border-radius:6px;
+  color:white;
+  cursor:pointer;
+  font-size:14px;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:black;
+  margin-top:30px;
+}
+
+/* Existing CSS above... */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .code-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .code-card button {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+
+  .code-info p {
+    font-size: 14px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>DarkBlox Hub</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="Tshirts.html">T-Shirts</a>
+    <a href="codes.html">Redeem Codes</a>
+    <a href="tools.html">Tools</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>🎁 Redeem Codes</h2>
+
+  <!-- All codes will display here -->
+  <div id="codesContainer"></div>
+</div>
+
+<footer>
+  <p>© 2026 DarkBlox Hub | Made by <a href="https://www.roblox.com/users/10430050418/profile" target="_blank">DarkRico</a></p>
+</footer>
+
+<script>
+// Sample codes array
+const codes = [
+  {game:"Roblox Dark Adventure", name:"Dark Starter", code:"DARK100", desc:"Dark theme starter item"},
+  {game:"Roblox Dark Adventure", name:"Rico Bonus", code:"RICO2026", desc:"Free bonus reward"},
+  {game:"Roblox Neon Race", name:"Neon Glow", code:"NEON777", desc:"Neon style accessory"},
+  {game:"Roblox Drift Mania", name:"Drift Pack", code:"DRIFTX", desc:"Car drift themed item"},
+  {game:"Roblox Shadow Lands", name:"Shadow Skin", code:"SHADOW01", desc:"Dark avatar look"},
+  {game:"Roblox Night Quest", name:"Night Pro", code:"NIGHTPRO", desc:"Night mode gear"},
+  {game:"Roblox Game Hub", name:"Gamer Boost", code:"GAMERX", desc:"Gaming badge item"},
+  {game:"Roblox Dark Adventure", name:"Starter Kit", code:"RBXSTART", desc:"Beginner reward"},
+  {game:"Roblox Dark Adventure", name:"Dark Cap", code:"DARKCAP", desc:"Black hat cosmetic"},
+  {game:"Roblox Ghost World", name:"Ghost Skin", code:"GHOSTBLOX", desc:"Transparent style"},
+  // Add more codes here...
+];
+
+// Display codes cleanly
+const container = document.getElementById("codesContainer");
+
+codes.forEach(c => {
+  const div = document.createElement("div");
+  div.className = "code-card";
+  div.innerHTML = `
+    <div class="code-info">
+      <p><strong>Game:</strong> ${c.game}</p>
+      <p><strong>Name:</strong> ${c.name}</p>
+      <p><strong>Code:</strong> ${c.code}</p>
+      <p><strong>Description:</strong> ${c.desc}</p>
+    </div>
+    <button onclick="copyCode('${c.code}')">Copy</button>
+  `;
+  container.appendChild(div);
+});
+
+// Copy function
+function copyCode(code){
+  navigator.clipboard.writeText(code);
+  alert(`Code "${code}" copied!`);
+}
+</script>
+
+</body>
+</html>

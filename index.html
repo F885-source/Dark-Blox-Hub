@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="description" content="DarkBlox Hub is your ultimate Roblox helper website! Free T-shirts, working redeem codes, and useful Roblox tools all in one place.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DarkBlox Hub</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0d0d0d;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: black;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  background: #ff003c;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 220px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+.cards a{
+  text-decoration:none;
+  color:white;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+
+/* Existing CSS above... */
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  .hero {
+    padding: 50px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  button {
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 768px){
+  .card:hover {
+    transform: none;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>DarkBlox Hub</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="Tshirts.html">T-Shirts</a>
+    <a href="codes.html">Redeem Codes</a>
+    <a href="tools.html">Tools</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Your Ultimate Roblox Helper</h2>
+  <p>Find Free T-Shirts, Redeem Codes & Roblox Tools in One Place.</p>
+  <button onclick="showMessage()">Explore Now</button>
+</section>
+
+<section class="cards">
+
+<a href="Tshirts.html" target="_blank">
+  <div class="card">
+    <h3>Free T-Shirts</h3>
+    <p>Discover stylish Roblox classic T-shirts.</p>
+  </div>
+</a>
+
+<a href="codes.html" target="_blank">
+  <div class="card">
+    <h3>Redeem Codes</h3>
+    <p>Latest working Roblox promo codes.</p>
+  </div>
+</a>
+
+<a href="tools.html" target="_blank">
+  <div class="card">
+    <h3>Tools</h3>
+    <p>Helpful Roblox tools & resources.</p>
+  </div>
+</a>
+
+</section>
+
+<footer>
+  <p>© 2026 DarkBlox Hub | Made by 
+  <a href="https://www.roblox.com/users/10430050418/profile" target="_blank">DarkRico</a></p>
+</footer>
+
+<script>
+function showMessage(){
+  alert("Use these options to explore!");
+}
+</script>
+
+</body>
+</html>
